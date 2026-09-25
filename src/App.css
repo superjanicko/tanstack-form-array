@@ -1,0 +1,84 @@
+/*@layer theme, base, components, utilities;*/
+@import 'tailwindcss';
+@import 'flowbite/src/themes/default.css';
+/* @import 'flowbite/dist/flowbite.css'; */
+
+@plugin 'flowbite/plugin';
+
+@custom-variant dark (&:where(.dark, .dark *));
+@source './';
+
+@theme {
+  --font-zirkel: Zirkel, sans-serif;
+  --default-font-family: var(--font-zirkel);
+
+  --color-brand-50: #eef6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bedbff;
+  --color-brand-300: #8ec5ff;
+  --color-brand-400: #51a2ff;
+  --color-brand-500: #2b7fff;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #155dfc;
+  --color-brand-800: #193cb8;
+  --color-brand-900: #1c398e;
+  --color-brand-950: #162455;
+
+  --color-base-medium: #e5e7eb;
+  --color-primary-soft: #ffffff;
+  --color-primary-medium: #ffffff;
+  --color-body: #4a5565;
+  --color-secondary-medium: var(--color-gray-50);
+  --color-secondary-strong: var(--color-gray-50);
+  --color-tertiary: #f3f4f6;
+  --color-tertiary-medium: #f3f4f6;
+
+  --color-quaternary: var(--color-gray-200);
+
+  --color-border-base: var(--color-gray-200);
+  --color-border-base-medium: var(--color-gray-200);
+  --color-border-brand: var(--color-brand-700);
+  --color-border-danger-subtle: var(--color-rose-200);
+  --color-bg-brand: var(--color-brand-700);
+  --color-fg-info: var(--color-brand-900);
+}
+
+@layer theme {
+  .dark {
+    --color-body: #99a1af;
+    --color-primary-soft: var(--color-gray-900);
+    --color-primary-medium: #1e2939;
+    --color-secondary: var(--color-gray-950);
+    --color-secondary-medium: var(--color-gray-800);
+    --color-secondary-strong: var(--color-gray-700);
+    --color-tertiary-medium: #333e4f;
+    --color-tertiary: #1e2939;
+    --color-quaternary: var(--color-gray-700);
+    --color-border-base: var(--color-gray-800);
+    --color-border-base-medium: var(--color-gray-700);
+    --color-border-brand: var(--color-brand-500);
+    --color-border-danger-subtle: var(--color-rose-900);
+    --color-bg-brand: var(--color-brand-600);
+    --color-fg-info: var(--color-brand-300);
+  }
+}
+
+select:not([size]) {
+  appearance: none;
+  print-color-adjust: exact;
+  background-image: url("data:image/svg+xml,%3csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3e %3cpath stroke='oklch(55.1%25 0.027 264.364)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3e %3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 0.75em 0.75em;
+  padding-right: 2.5rem;
+}
+textarea {
+  field-sizing: content;
+}
+body {
+  color: var(--color-gray-900);
+}
+
+.dark body {
+  color: var(--color-white);
+}
