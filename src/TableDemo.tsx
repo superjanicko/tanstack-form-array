@@ -40,19 +40,19 @@ const TableDemo = () => {
       ...prev,
       isTouched: true,
       isValid: false,
-      errorMap: { onMount: 'nedobré COL' },
+      errorMap: { onMount: 'Error on COL' },
     }));
     form.setFieldMeta('people[0]', (prev) => ({
       ...prev,
       isTouched: true,
       isValid: false,
-      errorMap: { onMount: 'nedobré ROW' },
+      errorMap: { onMount: 'Error on ROW' },
     }));
     form.setFieldMeta('people', (prev) => ({
       ...prev,
       isTouched: true,
       isValid: false,
-      errorMap: { onMount: 'nedobré TABLE' },
+      errorMap: { onMount: 'Error on TABLE' },
     }));
   }, [form]);
 
